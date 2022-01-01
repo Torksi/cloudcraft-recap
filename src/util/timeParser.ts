@@ -23,10 +23,18 @@ export const getMinutes = (time: string) => {
   return totalMinutes;
 };
 
-export const formatFloat = (time: number, decimals: number) => {
+export const formatFloat = (time: any = "0", decimals = 0) => {
   if (!time || !decimals) return "0";
-  console.log("FORMATTING", time, decimals);
-  return time
+
+  let t = 0;
+
+  if (typeof time === "number") {
+    t = time;
+  } else {
+    t = parseFloat(time);
+  }
+
+  return t
     .toFixed(decimals)
     .replaceAll(".", ",")
     .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
