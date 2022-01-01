@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { FormEvent, useState } from "react";
 // eslint-disable-next-line import/extensions
-import topPlayersJson from "../data/2021/players.json";
+// import topPlayersJson from "../data/2021/players.json";
 import { formatFloat, getMinutes } from "../util/timeParser";
 
 export default function IndexPage() {
@@ -17,14 +17,17 @@ export default function IndexPage() {
 
   const globalStats = { deaths: 8523, balance: 0 };
 
-  const totalMinutes = topPlayersJson.data.reduce((acc: number, cur: any) => {
+  /* const totalMinutes = topPlayersJson.data.reduce((acc: number, cur: any) => {
     return acc + getMinutes(cur.activePlaytime.d);
   }, 0);
 
   const totalBalance = topPlayersJson.data.reduce((acc: number, cur: any) => {
     if (cur.balance.v === "-") return acc;
     return acc + parseFloat(cur.balance.v);
-  }, 0);
+  }, 0); */
+
+  const totalMinutes = 612061.063856;
+  const totalBalance = 8792384.257454097;
 
   return (
     <>
