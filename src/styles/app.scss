@@ -19,6 +19,9 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 * {
@@ -28,6 +31,7 @@ a {
 .main {
   min-height: 100vh;
   padding: 4rem 0;
+  padding-bottom: 2rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -64,23 +68,20 @@ a {
 }
 
 .title,
-.description {
+.description,
+.subtitle {
   text-align: center;
+}
+
+.subtitle {
+  margin-top: 2rem;
+  font-size: 2.2rem;
 }
 
 .description {
   margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .card {
@@ -93,6 +94,7 @@ a {
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   width: 20rem;
+  height: 210px;
 }
 
 .card h2 {
@@ -122,4 +124,75 @@ a {
     -webkit-user-select: none;
     -ms-user-select: none;
   }
+}
+
+.btn {
+  margin: 0 0.25rem;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $body-color;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1.1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+@media only screen and (max-width: 383px) {
+  .btn {
+    margin-top: 0.5rem;
+  }
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.form-control {
+  margin: 0 0.25rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.intro-text {
+  margin-bottom: 2rem;
+}
+
+.back-to-search {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }

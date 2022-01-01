@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require("fs");
 
@@ -17,6 +18,7 @@ fs.readdir("./public/data/2021", (err, files) => {
     mobKillTotal += data.info.mob_kill_count;
   });
 
+  console.log(`Total Deaths: ${deathTotal}`);
   console.log(`Average Deaths: ${deathTotal / count}`);
   console.log(`Average Mob Kills: ${mobKillTotal / count}`);
   console.log(`Average Player Kills: ${playerKillTotal / count}`);

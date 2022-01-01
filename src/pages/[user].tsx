@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import _ from "lodash";
+import Link from "next/link";
 import Error from "../modules/Error";
 import Loading from "../modules/Loading";
 import { numberSuffix } from "../util/numberSuffix";
@@ -96,12 +97,6 @@ export default function UserPage({ mojang }: { mojang: any }) {
     }
     return "an average amount of kills";
   };
-
-  console.log(data);
-
-  console.log(leaderboardData);
-
-  console.log(topBalancePlayers);
 
   return (
     <>
@@ -251,6 +246,15 @@ export default function UserPage({ mojang }: { mojang: any }) {
           ) : (
             <div className="col-md-6" />
           )}
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p className="back-to-search">
+              <Link href="/">
+                <a>Go back to search</a>
+              </Link>
+            </p>
+          </div>
         </div>
       </main>
     </>
