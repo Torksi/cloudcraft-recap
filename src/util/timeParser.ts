@@ -36,6 +36,7 @@ export const formatFloat = (time: any = "0", decimals = 0) => {
 
   return t
     .toFixed(decimals)
+    .toString()
     .replaceAll(".", ",")
     .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 };
