@@ -25,6 +25,7 @@ export const getMinutes = (time: string) => {
 
 export const formatFloat = (time: number, decimals: number) => {
   if (!time || !decimals) return "0";
+  console.log("FORMATTING", time, decimals);
   return time
     .toFixed(decimals)
     .replaceAll(".", ",")
