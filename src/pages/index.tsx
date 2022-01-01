@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { FormEvent, useState } from "react";
 // eslint-disable-next-line import/extensions
 // import topPlayersJson from "../data/2021/players.json";
-import { formatFloat, getMinutes } from "../util/timeParser";
+import { formatFloat } from "../util/timeParser";
 
 export default function IndexPage() {
   const router = useRouter();
